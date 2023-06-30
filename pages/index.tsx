@@ -18,29 +18,26 @@ const Home: NextPage = () => {
       </Head>
 
       <Box
-        w="100vw" /* Set the width of the Box to 100% of the viewport width */
-        h="calc(100vh - 64px)" /* Subtract the height of the NavBar from the viewport height */
+        w="full"
+        h="calc(100vh)"
         bgImage={"url(/home-background.svg)"}
         backgroundPosition="center"
       >
-        <Stack h="100%" justify="center" spacing={4}>
-          {/* NavBar */}
+        <Stack w="full" h="calc(100vh)" justify="center">
+					{ /* NavBar */ }
           <NavBar />
 
           <Spacer />
-
           <Center>{Connected ? <Connected /> : <Disconnected />}</Center>
-
           <Center>
-            {/* If connected, the second view, otherwise the first */}
-          </Center>
-
+						{ /* If connected, the second view, otherwise the first */ }
+                </Center>
           <Spacer />
 
           <Center>
             <Box marginBottom={4} color="white">
               <a
-                href="https://github.com/thadimudupulasahith"
+                href="https://twitter.com/_buildspace"
                 target="_blank"
                 rel="noopener noreferrer"
               >
